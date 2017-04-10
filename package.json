@@ -1,0 +1,32 @@
+{
+  "name": "calculate-age",
+  "version": "1.0.0",
+  "description": "App to calculate age with React.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgalianoz/calculate-age.git"
+  },
+  "author": "@jgalianzoz - Manuel Galindez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jgalianoz/calculate-age/issues"
+  },
+  "homepage": "https://github.com/jgalianoz/calculate-age#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "react": "^15.5.3",
+    "react-dom": "^15.5.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.1",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3"
+  }
+}
