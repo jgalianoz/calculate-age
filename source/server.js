@@ -11,13 +11,14 @@ function requestHandler(request, response) {
   response.write(
     renderToStaticMarkup(
       <Layout
-        title="Calculate Age"
+        title='Calculate Age Aplication'
       />
     ),
   );
-  response.end();
-}
 
+  return response.end();
+
+}
 
 const server = http.createServer(requestHandler);
 
