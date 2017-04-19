@@ -16,6 +16,12 @@ function Layout (props) {
         rel="stylesheet"
         href="http://localhost:3001/styles.css"
       />
+
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+      />
+
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
@@ -26,7 +32,8 @@ function Layout (props) {
       <section className="Landing">
 
         <div className={styles.MainSection}>
-          <h1>¡Let's calculate your age!</h1>
+          <h1 className={styles.MainSectionTitle}>¡Let's calculate your age!</h1>
+          <a className={styles.ButtonInit} href="#">Empecemos</a>
         </div>
 
         <div id="render-target"></div>
