@@ -16,11 +16,8 @@ function Layout (props) {
       />
     </head>
     <body>
-      <section className="Landing">
-        <div className="MainSection">
-          <h1>I love Dios</h1>
-        </div>
-      </section>
+      <div id="render-target"></div>
+      <script src="http://localhost:3001/app.js"></script>
     </body>
     </html>
   );
