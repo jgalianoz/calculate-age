@@ -22,8 +22,8 @@ const config = {
       {
         test: /\.styl$/,
         use: ExtractTextPlugin.extract({
-          fallback: 'styles-loader',
-          use: ['css-loader', 'stylus-loader'],
+          fallback: 'style-loader',
+          use: ['css-loader?modules', 'stylus-loader'],
         }),
       },
     ],
