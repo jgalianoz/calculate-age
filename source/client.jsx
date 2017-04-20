@@ -1,8 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
 
+import Questions from './forms/components/Questions';
 
 render(
-  <h1>Que tal</h1>,
+  <Questions />,
   document.getElementById('render-target'),
 );

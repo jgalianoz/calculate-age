@@ -13,6 +13,11 @@ function Layout (props) {
         content="width=device-width, initial-scale=1.0"
       />
       <link
+        rel="shortcut icon"
+        href="http://localhost:3001/images/cover-home.png"
+      />
+
+      <link
         rel="stylesheet"
         href="http://localhost:3001/styles.css"
       />
