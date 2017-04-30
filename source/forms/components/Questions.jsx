@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import styles from './Questions.styl';
+
 class Questions extends Component {
 
   constructor(props) {
@@ -21,9 +23,8 @@ class Questions extends Component {
 
   render() {
     return (
-      <div className="wrapper">
+      <div className={styles.wrapper}>
         <form>
-
           <div>
             <label>
               Choose a number (1-10):
@@ -66,7 +67,7 @@ class Questions extends Component {
             <label>
               Year of birth:
                 <input
-                  name="number"
+                  name="year"
                   type="number"
                   value={this.state.year}
                   onChange={this.updateInput}

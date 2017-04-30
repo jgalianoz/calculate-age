@@ -19,23 +19,26 @@ const config = {
           presets: ['es2015', 'react'],
         },
       },
+
       {
         test: /\.styl$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader?modules', 'stylus-loader'],
+        loader: ExtractTextPlugin.extract({
+          loader: 'css-loader?modules!stylus-loader'
         }),
       },
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.styl', '.json'],
+    extensions: ['.js', '.jsx', '.css', '.styl'],
   },
 
   target: 'web',
 
   plugins: [
-    new ExtractTextPlugin('../statics/styles.css')
+    new ExtractTextPlugin({
+      filename: '../statics/style.css',
+      allChunks: true,
+    }),
   ]
 };
 
