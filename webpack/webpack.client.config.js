@@ -1,6 +1,4 @@
-const webpack = require('webpack');
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
 const config = {
@@ -17,28 +15,17 @@ const config = {
         exclude: /node_modules/,
         options: {
           presets: ['es2015', 'react'],
+          plugins: ['transform-es2015-modules-commonjs'],
         },
-      },
-
-      {
-        test: /\.styl$/,
-        loader: ExtractTextPlugin.extract({
-          loader: 'css-loader?modules!stylus-loader'
-        }),
       },
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.css', '.styl'],
+    extensions: ['.js', '.jsx'],
   },
-
   target: 'web',
-
   plugins: [
-    new ExtractTextPlugin({
-      filename: '../statics/style.css',
-      allChunks: true,
-    }),
+    
   ]
 };
 

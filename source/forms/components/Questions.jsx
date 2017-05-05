@@ -1,6 +1,36 @@
 import React, { Component } from 'react';
 
-import styles from './Questions.styl';
+import styled from 'styled-components';
+
+
+
+const MainSection = styled.section`
+  background-image: url('http://localhost:3001/images/cover-home.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1 {
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    color: #26c6da;
+  }
+
+  a {
+    display: block;
+    padding: 1em;
+    border-radius: 10px;
+    background: #009688;
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px auto 0;
+    width: 100px;
+  }
+`;
 
 class Questions extends Component {
 
@@ -23,7 +53,19 @@ class Questions extends Component {
 
   render() {
     return (
-      <div className={styles.wrapper}>
+      <div>
+
+        <MainSection>
+          <h1>¡Let's calculate your age!</h1>
+          <a href="#">Empecemos</a>
+        </MainSection>
+
+        <div>
+          <h2>
+            Let's travel back in time and guess your age
+          </h2>
+        </div>
+
         <form>
           <div>
             <label>
@@ -67,7 +109,7 @@ class Questions extends Component {
             <label>
               Year of birth:
                 <input
-                  name="year"
+                  name="number"
                   type="number"
                   value={this.state.year}
                   onChange={this.updateInput}
