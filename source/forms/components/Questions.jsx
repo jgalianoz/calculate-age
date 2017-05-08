@@ -19,10 +19,11 @@ class Questions extends Component {
     super(props);
     this.state = {
       number: 1,
-      birthday: true,
+      birthday: false,
       year: 0,
     };
     this.updateInput = this.updateInput.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
 
   updateInput(input) {
@@ -32,12 +33,22 @@ class Questions extends Component {
     this.setState(setValue);
   }
 
+
   onSubmit(ev) {
 
     ev.preventDefault();
 
+    let result = (this.state.number * 2 + 5) * 50;
+
+
+    if ( !this.state.birthday ) {
+      result = (result + 1767) - this.state.year;
+    } else {
+      result = (result + 1766) - this.state.year;
+    }
+
     ReactDOM.unmountComponentAtNode(document.getElementById('render-target'));
-    ReactDOM.render(<Result />,
+    ReactDOM.render(<Result result={result}/>,
      document.getElementById('render-target'));
   }
 

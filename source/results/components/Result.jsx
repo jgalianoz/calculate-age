@@ -2,7 +2,10 @@ import React from 'react';
 
 function Result (props) {
     return(
-      <h1>Resultados</h1>
+      <div>
+        <h1>Resultados</h1>
+        {props.result}
+      </div>
     );
 }
 

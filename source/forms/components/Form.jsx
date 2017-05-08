@@ -111,9 +111,8 @@ function Form (props) {
             name="birthday"
             onChange={props.update}
              />
-
             <span></span>
-          No
+          Not
         </label>
       </Switch>
 
