@@ -86,7 +86,7 @@ const Switch = styled.div`
 
 function Form (props) {
   return(
-    <Forms>
+    <Forms onSubmit={props.onSubmit}>
       <div>
         <label>
           Choose a number (1-10):
@@ -97,7 +97,7 @@ function Form (props) {
           min="1"
           max="10"
           onChange={props.update}
-          required />
+           />
       </div>
 
       <Switch>
@@ -110,7 +110,7 @@ function Form (props) {
             type="checkbox"
             name="birthday"
             onChange={props.update}
-            required />
+             />
 
             <span></span>
           No
@@ -126,7 +126,7 @@ function Form (props) {
           type="number"
           onChange={props.update}
           placeholder="Año de nacimiento"
-          required />
+           />
       </div>
 
       <button>

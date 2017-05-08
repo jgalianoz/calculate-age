@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 
 import MainSection from '../../shared/components/Section';
 import Banner from '../../shared/components/Banner';
 import Form from './Form';
+
+import Result from '../../results/components/Result';
 
 const Wrapper = styled.div`
   max-width: 680px;
@@ -27,7 +30,15 @@ class Questions extends Component {
     const setValue = {};
     setValue[input.target.name] = value;
     this.setState(setValue);
-    console.log(this.state);
+  }
+
+  onSubmit(ev) {
+
+    ev.preventDefault();
+
+    ReactDOM.unmountComponentAtNode(document.getElementById('render-target'));
+    ReactDOM.render(<Result />,
+     document.getElementById('render-target'));
   }
 
   render() {
@@ -43,6 +54,7 @@ class Questions extends Component {
           <Wrapper>
             <Form
               update={this.updateInput}
+              onSubmit={this.onSubmit}
             />
           </Wrapper>
         </section>
