@@ -97,7 +97,7 @@ function Form (props) {
           min="1"
           max="10"
           onChange={props.update}
-           />
+           required/>
       </div>
 
       <Switch>
@@ -109,8 +109,7 @@ function Form (props) {
           <input
             type="checkbox"
             name="birthday"
-            onChange={props.update}
-             />
+            onChange={props.update}/>
             <span></span>
           Not
         </label>
@@ -125,7 +124,7 @@ function Form (props) {
           type="number"
           onChange={props.update}
           placeholder="Año de nacimiento"
-           />
+           required/>
       </div>
 
       <button>

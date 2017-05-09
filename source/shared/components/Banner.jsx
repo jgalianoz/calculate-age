@@ -17,7 +17,7 @@ function Banner () {
   return(
     <TopBanner role="banner">
       <h2>
-        Let's travel back in time and guess your age
+        Let's travel back in time and guess your age.
       </h2>
     </TopBanner>
   );
