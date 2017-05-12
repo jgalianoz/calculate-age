@@ -4,7 +4,9 @@
   "description": "App to calculate age with React.js",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack -w",
+    "build-pro":"NODE_ENV=production webpack -p",
+    "build-dev": "webpack -w",
+    "bff": "node ./built/server",
     "sfs": "serve ./built/statics --port 3001 --cache 0"
   },
   "repository": {
@@ -36,7 +38,6 @@
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
     "extract-text-webpack-plugin": "^2.1.0",
-    "react-addons-css-transition-group": "^15.5.2",
     "serve": "^5.1.4",
     "webpack": "^2.4.1"
   }

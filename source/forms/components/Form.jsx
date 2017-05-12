@@ -89,13 +89,13 @@ function Form (props) {
     <Forms onSubmit={props.onSubmit}>
       <div>
         <label>
-          Choose a number (1-10):
+          Choose a number (1-9):
         </label>
         <input
           name="number"
           type="number"
           min="1"
-          max="10"
+          max="9"
           onChange={props.update}
            required/>
       </div>
@@ -105,13 +105,13 @@ function Form (props) {
           ¿Ya has cumplido año?
         </label>
         <label className="option">
-          Yes
+          Not
           <input
             type="checkbox"
             name="birthday"
             onChange={props.update}/>
             <span></span>
-          Not
+          Yes
         </label>
       </Switch>
 

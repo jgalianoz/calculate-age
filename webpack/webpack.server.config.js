@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path');
 
 
@@ -14,7 +15,15 @@ const config = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         options: {
-          presets: ['latest-minimal', 'react'],
+          presets: ['react'],
+          env: {
+            production: {
+              presets: ['es2015'],
+            },
+            development: {
+              plugins: ['transform-es2015-modules-commonjs'],
+            },
+          },
         },
       },
 
@@ -25,8 +34,26 @@ const config = {
   },
   target: 'node',
   plugins: [
-
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
+      },
+    }),
   ],
 };
+
+if (process.env.NODE_ENV === 'production') {
+  config.plugins.push(
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+      },
+      mangle: {
+        except: ['$super', '$', 'exports', 'require'],
+      },
+    })
+  );
+}
 
 module.exports = config;

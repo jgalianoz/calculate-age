@@ -33,32 +33,31 @@ class Questions extends Component {
     this.setState(setValue);
   }
 
-
   onSubmit(ev) {
 
     ev.preventDefault();
 
-    let result = (this.state.number * 2 + 5) * 50;
-
+    let result = (this.state.number * 2 + 5) * 50 - (this.state.year);
 
     if ( !this.state.birthday ) {
-      result = (result + 1767) - this.state.year;
+      result = (result + 1766);
     } else {
-      result = (result + 1766) - this.state.year;
+      result = (result + 1767);
     }
 
+    const convertion = String(result);
+    const age = convertion.substr(1);
+
     ReactDOM.unmountComponentAtNode(document.getElementById('render-target'));
-    ReactDOM.render(<Result result={result}/>,
+    ReactDOM.render(<Result age={age}/>,
      document.getElementById('render-target'));
   }
 
   render() {
-
     return (
       <div role="application">
 
         <MainSection />
-
         <Banner />
 
         <section>

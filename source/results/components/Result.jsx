@@ -1,7 +1,5 @@
 import React from 'react';
-import CSSTransitionGroup from 'react-addons-css-transition-group';
 import styled, { keyframes } from 'styled-components';
-
 
 const slide = keyframes`
   from {
@@ -27,7 +25,7 @@ const SlideInDown = styled.div`
     overflow: hidden;
   }
   .CardResult-head {
-    background: rgba(233, 229, 229, 0.6);
+    background: rgba(233, 229, 229, .8);
     padding: .5em;
     h1 {
       font-size: 1.5em;
@@ -68,7 +66,7 @@ function Result (props) {
                     src="http://localhost:3001/images/pastel.png"
                     width="120"
                     height="120" />
-                  <h2>{props.result}</h2>
+                  <h2>{props.age}</h2>
                 </div>
               </div>
               <div className="CardResult-footer">
