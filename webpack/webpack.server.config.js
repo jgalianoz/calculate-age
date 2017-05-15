@@ -2,9 +2,6 @@ const webpack = require('webpack');
 const path = require('path');
 
 
-
-console.log(process.env.NODE_ENV);
-
 const config = {
   entry: './source/server.js',
   output: {
@@ -42,6 +39,7 @@ const config = {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
       },
     }),
+    new webpack.optimize.OccurrenceOrderPlugin(true),
   ],
 };
 

@@ -4,16 +4,17 @@
   "description": "App to calculate age with React.js",
   "main": "index.js",
   "scripts": {
-    "build-pro":"NODE_ENV=production webpack -p",
-    "build-dev": "webpack -w",
-    "bff": "node ./built/server",
-    "sfs": "serve ./built/statics --port 3001 --cache 0"
+    "build": "NODE_ENV=production webpack -p",
+    "bff": "node ./built/server/index.js",
+    "start": "npm run bff",
+    "sfs": "serve ./built/statics --port 3001 --cache 0",
+    "watch": "webpack -w"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jgalianoz/calculate-age.git"
   },
-  "author": "@jgalianzoz - Manuel Galindez",
+  "author": "@jgalianoz - Manuel Galindez",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jgalianoz/calculate-age/issues"
@@ -22,9 +23,7 @@
   "dependencies": {
     "react": "^15.5.3",
     "react-dom": "^15.5.3",
-    "styled-components": "^1.4.6"
-  },
-  "devDependencies": {
+    "styled-components": "^1.4.6",
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
@@ -36,8 +35,10 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
-    "extract-text-webpack-plugin": "^2.1.0",
     "serve": "^5.1.4",
     "webpack": "^2.4.1"
+  },
+  "devDependencies": {
+
   }
 }

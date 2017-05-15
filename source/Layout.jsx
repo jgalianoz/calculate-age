@@ -24,7 +24,7 @@ function Layout (props) {
 
       <link
         rel="shortcut icon"
-        href="http://localhost:3001/images/cover-home.png"
+        href={`${props.domain}/images/cover-home.png`}
       />
 
     </head>
@@ -34,7 +34,7 @@ function Layout (props) {
         <div id="render-target"></div>
       </section>
 
-      <script src="http://localhost:3001/app.js"></script>
+      <script src={`${props.domain}/app.js`}></script>
     </body>
     </html>
   );

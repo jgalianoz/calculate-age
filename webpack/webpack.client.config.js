@@ -6,7 +6,10 @@ const config = {
   entry: './source/client.jsx',
   output: {
     filename: 'app.js',
-    path: path.resolve(__dirname, '../built/statics')
+    path: path.resolve(__dirname, '../built/statics'),
+    publicPath: process.env.NODE_ENV === 'production'
+      ? 'https://calculate-age-sfs.now.sh'
+      : 'http://localhost:3001/',
   },
   module: {
     rules: [

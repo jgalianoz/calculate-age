@@ -1,0 +1,8 @@
+{
+  "name": "calculate-age",
+  "alias": "calculate-age.now.sh",
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "type": "npm"
+}
