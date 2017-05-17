@@ -6,18 +6,14 @@ const slide = keyframes`
     transform: translate3d(0, -100%, 0);
     visibility: visible;
   }
-
   to {
     transform: translate3d(0, 0, 0);
   }
-
 `;
-
 const SlideInDown = styled.div`
   animation: ${slide} .3s;
   padding-top: 8em;
   text-align: center;
-
   .CardResult {
     border-radius: 10px;
     max-width: 400px;
@@ -63,13 +59,13 @@ function Result (props) {
                 <h1>¡Hey hemos adivinado tu edad!</h1>
                 <div className="ContentResult">
                   <img
-                    src="http://localhost:3001/images/pastel.png"
+                    src="https://calculate-age-sfs.now.sh/images/pastel.png"
                     width="120"
                     height="120" />
                   <h2>{props.age}</h2>
                 </div>
               </div>
-              <div className="CardResult-footer">
+              <div className="CardResult-footer icon-refresh">
                 <h3>
                   Invita a tus compañeros y adivina sus edades.
                 </h3>

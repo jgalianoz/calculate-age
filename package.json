@@ -7,7 +7,7 @@
     "build": "NODE_ENV=production webpack -p",
     "bff": "node ./built/server/index.js",
     "start": "npm run bff",
-    "sfs": "serve ./built/statics --port 3001 --cache 0",
+    "sfs": "serve ./built/statics --port 3001 --cache 0 --cors",
     "watch": "webpack -w"
   },
   "repository": {
@@ -23,7 +23,9 @@
   "dependencies": {
     "react": "^15.5.3",
     "react-dom": "^15.5.3",
-    "styled-components": "^1.4.6",
+    "styled-components": "^1.4.6"
+  },
+  "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
@@ -37,8 +39,5 @@
     "eslint-plugin-react": "^6.10.3",
     "serve": "^5.1.4",
     "webpack": "^2.4.1"
-  },
-  "devDependencies": {
-
   }
 }

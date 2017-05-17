@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.section`
-  background-image: url('http://localhost:3001/images/cover-home.png');
+  background-image: url('https://calculate-age-sfs.now.sh/images/cover-home.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
