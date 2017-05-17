@@ -12,7 +12,8 @@ const slide = keyframes`
 `;
 const SlideInDown = styled.div`
   animation: ${slide} .3s;
-  padding-top: 8em;
+  position: relative;
+  padding: 8em 0;
   text-align: center;
   .CardResult {
     border-radius: 10px;
@@ -48,6 +49,20 @@ const SlideInDown = styled.div`
       margin: 0;
     }
   }
+  .refresh {
+    background: #009688;
+    border-radius: 50%;
+    bottom: 0;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    display: block;
+    position: absolute;
+    padding: 1em;
+    right: 70px;
+    text-decoration: none;
+  }:before {
+    color: #edeaea;
+    font-size: 2em;
+  }
 `;
 
 function Result (props) {
@@ -65,12 +80,15 @@ function Result (props) {
                   <h2>{props.age}</h2>
                 </div>
               </div>
-              <div className="CardResult-footer icon-refresh">
+              <div className="CardResult-footer">
                 <h3>
                   Invita a tus compañeros y adivina sus edades.
                 </h3>
               </div>
           </div>
+
+          <a className="icon-refresh refresh" href="/"></a>
+
         </SlideInDown>
       </section>
     );
