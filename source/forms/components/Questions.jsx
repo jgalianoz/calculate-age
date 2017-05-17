@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import MainSection from '../../shared/components/Section';
 import Banner from '../../shared/components/Banner';
 import Form from './Form';
+import Footer from '../../shared/components/Footer';
 
 import Result from '../../results/components/Result';
 
@@ -69,6 +70,7 @@ class Questions extends Component {
           </Wrapper>
         </section>
 
+        <Footer />
       </div>
     );
   }

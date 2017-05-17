@@ -55,6 +55,7 @@ const SlideInDown = styled.div`
     bottom: 0;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     display: block;
+    outline: 0;
     position: absolute;
     padding: 1em;
     right: 70px;
