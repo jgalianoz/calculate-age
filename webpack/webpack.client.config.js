@@ -1,13 +1,14 @@
 const webpack = require('webpack');
 const path = require('path');
 
+const isProd = process.env.  === 'production'
 
 const config = {
   entry: './source/client.jsx',
   output: {
     filename: 'app.js',
     path: path.resolve(__dirname, '../built/statics'),
-    publicPath: process.env.NODE_ENV === 'production'
+    publicPath: isProd
       ? 'https://calculate-age-sfs.now.sh'
       : 'http://localhost:3001/',
   },
@@ -29,6 +30,7 @@ const config = {
           },
         },
       },
+
     ],
   },
   resolve: {
@@ -44,7 +46,7 @@ const config = {
   ]
 };
 
-if (process.env.NODE_ENV === 'production') {
+if (isProd) {
   config.plugins.push(
     new webpack.optimize.UglifyJsPlugin({
       compress: {

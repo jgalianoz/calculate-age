@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 function Layout (props) {
   return(
     <html lang="es">
@@ -10,11 +9,6 @@ function Layout (props) {
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
-      />
-
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
       />
 
       <link
