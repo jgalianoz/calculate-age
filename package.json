@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/jgalianoz/calculate-age#readme",
   "dependencies": {
-    "react": "^15.5.3",
+    "react": "^17.0.2",
     "react-dom": "^15.5.3",
     "styled-components": "^1.4.6"
   },
